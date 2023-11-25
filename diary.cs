@@ -7,10 +7,11 @@ using static System.Net.Mime.MediaTypeNames;
 namespace ConsoleApp13
 {
 
+
     internal class Program
     {
 
-        static string path = "C:\\file_path\\diary.txt";
+        static string path = "C:\\Users\\Altair\\Desktop\\Proje\\diary.txt";
         static bool firstTime = true;
         static bool dailyLimit = true;
         static int currentIndex = 0;
@@ -192,10 +193,11 @@ namespace ConsoleApp13
                         Console.WriteLine("-------------------------");
                     }
                     else
-                    {
+                    {   
                         Console.WriteLine("Kayıt bulunamadı!");
                         Menu();
                         break;
+                       
                     }
                     Console.WriteLine("(s)onraki kayıt | (d)üzenle | (x)sil | (a)na menu ");
                     char choice = Convert.ToChar(Console.ReadKey().KeyChar.ToString());
@@ -203,6 +205,7 @@ namespace ConsoleApp13
 
                     if (choice == 's')
                     {
+                        Console.Clear();
                         currentIndex++;
 
                     }
@@ -222,10 +225,11 @@ namespace ConsoleApp13
 
 
                         if (youSure == 'e')
-                        {
+                        {                       
                             diary.RemoveAt(currentIndex);
+                            currentIndex = 0;
                             Console.WriteLine("Kayıt silindi.");
-                        }
+                         }
 
                         else if (youSure == 'h')
                         {
@@ -249,8 +253,6 @@ namespace ConsoleApp13
                         Menu();
 
                     }
-
-
 
                 }
 
@@ -314,9 +316,10 @@ namespace ConsoleApp13
                 string day = Console.ReadLine();
                 if (diary.Contains(day))
                 {
-                    Console.WriteLine("Kabomm");
+                    Console.WriteLine("TODO");
                 }
               
+
             }
 
         }
