@@ -11,7 +11,7 @@ namespace ConsoleApp13
     internal class Program
     {
 
-        static string path = "C:\\Users\\Altair\\Desktop\\Proje\\diary.txt";
+        static string path = "C:\\FILE_PATH\\Proje\\diary.txt";
         static bool firstTime = true;
         static bool dailyLimit = true;
         static int currentIndex = 0;
