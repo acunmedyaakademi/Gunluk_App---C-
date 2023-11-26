@@ -22,7 +22,7 @@ namespace ConsoleApp13
 
         static void Main(string[] args)
         {
-            CheckUser();
+            Menu();
             
 
             static void Menu()
@@ -60,12 +60,15 @@ namespace ConsoleApp13
 
                     else if (choice == 2)
                     {
+                   //TODO
+
                         ListRecords();
 
                     }
 
                     else if (choice == 3)
                     {
+                     //TODO
                         DeleteAllRecords();
 
                     }
