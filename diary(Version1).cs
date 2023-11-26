@@ -199,128 +199,14 @@ namespace ConsoleApp13
                         break;
                        
                     }
-                    Console.WriteLine("(s)onraki kayıt | (d)üzenle | (x)sil | (a)na menu ");
-                    char choice = Convert.ToChar(Console.ReadKey().KeyChar.ToString());
-                    Console.WriteLine();
-
-                    if (choice == 's')
-                    {
-                        Console.Clear();
-                        currentIndex++;
-
-                    }
-
-                    else if (choice == 'd')
-                    {
-                        diary[currentIndex] = EditRecord(diary[currentIndex]);
-
-
-                    }
-
-                    else if (choice == 'x')
-                    {
-                        Console.WriteLine("Emin misin? (e) / (h)");
-                        char youSure = Convert.ToChar(Console.ReadKey().KeyChar.ToString());
-                        Console.WriteLine();
-
-
-                        if (youSure == 'e')
-                        {                       
-                            diary.RemoveAt(currentIndex);
-                            currentIndex = 0;
-                            Console.WriteLine("Kayıt silindi.");
-                         }
-
-                        else if (youSure == 'h')
-                        {
-
-                            Console.WriteLine("İşlem iptal edildi. Ana menüye dönülüyor...");
-                            Menu();
-                        }
-
-                        else
-                        {
-                            Console.WriteLine("Hatalı harf! Ana menüye dönülüyor...");
-                            Menu();
-                        }
-
-                    }
-
-                    else if (choice == 'a')
-                    {
-
-                        Console.WriteLine("Ana menüye dönülüyor...");
-                        Menu();
-
+                    
                     }
 
                 }
 
             }
 
-            // Kayıtları düzenler.
-            static string EditRecord(string currentRecord)
-                {
-                    Console.Write("Yeni notunuzu girin: ");
-                    string newContent = Console.ReadLine();
-                    DateTime currentDate = GetDateNow();
-                    string newFormat = currentDate.ToString("dd/MM/yyyy");
-                    string record = $"{newContent}  - Kayıt edilen tarih: {newFormat}";
-                    Console.WriteLine($"Notunuz: {newContent} olarak güncellendi ve {newFormat} tarihinde kayıt edildi.");
-                    return record;
-                }
-         
-
-            static void DeleteAllRecords()
-            {
-                Console.WriteLine();
-                AreYouSureForAll();
-
-
-            }
-
-            // Emin misin sorusu sorar.
-                      
-
-            static void AreYouSureForAll()
-            {
-                Console.WriteLine("Emin misin? (e) / (h)");
-                char youSure = Convert.ToChar(Console.ReadKey().KeyChar.ToString());
-                Console.WriteLine();
-
-                if (youSure == 'e')
-                {
-                    diary.Clear();
-                    Console.WriteLine("Tüm kayıtlar silindi.");
-                }
-
-                else if (youSure == 'h')
-                {
-
-                    Console.WriteLine("İşlem iptal edildi. Ana menüye dönülüyor...");
-                    Menu();
-                }
-
-                else
-                {
-                    Console.WriteLine("Hatalı harf! Ana menüye dönülüyor...");
-                    Menu();
-                }
-            }
-
-            //TODO
-
-            static void FindRecords()
-            {
-                Console.Write("Gün.Ay.Yıl Giriniz: ");
-                string day = Console.ReadLine();
-                if (diary.Contains(day))
-                {
-                    Console.WriteLine("TODO");
-                }
-              
-
-            }
+            
 
         }
     }
