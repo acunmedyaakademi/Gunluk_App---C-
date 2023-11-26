@@ -81,7 +81,6 @@ namespace ConsoleApp13
                     {
                         Environment.Exit(0);
 
-
                     }
 
                     else
@@ -102,36 +101,6 @@ namespace ConsoleApp13
 
             }
 
-            // Kullanıcı kontrolü
-            static void CheckUser()
-            {
-                int sayac = 3;
-                while (sayac >= 1)
-                {
-                    Console.Write("Kullanıcı adınızı girin: ");
-                    string username = Console.ReadLine();
-                    Console.Write("Şifrenizi girin: ");
-                    string password = Console.ReadLine();
-
-                    if (username == "admin" || password == "password")
-                    {
-                        Console.Clear();
-                        Console.WriteLine($"Giriş başarılı. Hoşgeldin {username}\n");
-                        Console.WriteLine();
-                        Menu();
-
-                    }
-
-                    else
-                    {
-                        sayac -= 1;
-                        Console.WriteLine($"Hatalı kullanıcı adı veya şifre! Kalan Hak: {sayac}");
-
-                    }
-
-                }
-
-            }
 
             // Yeni kayıt ekler.
             static void AddNewRecord()
