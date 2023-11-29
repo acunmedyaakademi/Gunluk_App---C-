@@ -13,7 +13,7 @@ namespace ConsoleApp13
     {
 
         // Txt dosya yolu.
-        static string path = "C:\\FILE_PATH\\Proje\\diary.txt"; // Kendi dosya yolunuzu seçin.
+        static string path = "FILE_PATH"; // Kendi dosya yolunuzu seçin.
         // Program ilk defa mı çalışıyor?
         static bool firstTime = true;
         // Günlük metin ekleme limiti
@@ -212,7 +212,7 @@ namespace ConsoleApp13
                 }
                 else
                 {
-                    Console.WriteLine("Başka kayıt bulunamadı.");
+                    Console.WriteLine("Kayıt bulunamadı.");
                     currentIndex = 0;
                     Menu();
                     break;
@@ -301,6 +301,8 @@ namespace ConsoleApp13
         {
             Console.WriteLine();
             AreYouSureForAll();
+            dailyLimit = true;
+
 
 
         }
@@ -433,14 +435,14 @@ namespace ConsoleApp13
                 if (record.Contains(search))
                 {
                     Console.WriteLine(record);
-                    Thread.Sleep(5000);
                     found = true;
                 }
             }
 
             if (!found)
             {
-                Console.WriteLine("Bu tarihte kayıt edilmiş içerik bulunmuyor.");
+                Console.WriteLine("Bu kelimeyi içeren veya bu tarihte kayıt edilmiş içerik bulunmuyor.");
+                Thread.Sleep(5000);
                 Menu();
             }
         }
