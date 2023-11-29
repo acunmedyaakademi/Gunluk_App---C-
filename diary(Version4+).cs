@@ -56,7 +56,7 @@ namespace ConsoleApp13
                 Console.WriteLine("2.Kayıtları Listele");
                 Console.WriteLine("3.Tüm kayıtları sil");
                 Console.WriteLine("4.Kayıt Ara");
-                Console.WriteLine("5.Çıkış Yap");
+                Console.WriteLine("5.Programı Durdur.");
 
                 MenuSelection();
 
@@ -88,16 +88,16 @@ namespace ConsoleApp13
 
             else if (choice == 4)
             {
-                
+
                 FindRecords();
 
             }
 
             else if (choice == 5)
             {
-                Console.WriteLine("Hesaptan çıkış yapıldı.");
-                Console.Clear();
-                FirstMenu();
+                Console.WriteLine("Program durduldu.");
+                Environment.Exit(0);
+
 
             }
 
